@@ -1,0 +1,40 @@
+.card{
+    margin-right:40px;
+    width: 700px;
+    margin-left: 70px;
+    text-align:justify;
+    height: 380px;
+    margin-bottom:10px;
+    border-radius: 20px;
+}
+h2{
+    text-align: center;
+    color: darkcyan;
+    margin-top: 20px;
+    margin-bottom: 15px;
+    font-style: italic;
+    padding: auto;
+    font-size:38px;
+}
+.card-body{
+    padding: 25px;
+background-color: beige;
+}
+.card-header{
+    height: 35px;
+    background-color:darkslategrey;
+}
+body{
+background-color: rgb(253, 253, 246);
+}
+h6{
+    color: darkslategrey;
+    font-style: italic;
+}
+span{
+    font-size: 15px;
+    font-weight: 400;
+}
+.btn{
+    margin-left: 48px;
+}

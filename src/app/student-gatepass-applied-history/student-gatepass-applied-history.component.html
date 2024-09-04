@@ -1,0 +1,25 @@
+<body>
+<app-header></app-header>
+
+<h2>Applied Gatepass History</h2>
+
+<div *ngFor="let data of history" class="d-inline-flex mt-3 main">
+<div class="card " style="width: 18rem;">
+    <div class="card-header">
+        
+      </div>
+    <div class="card-body">
+     <h6>Student Id : <span>{{data.studentid}}</span></h6>
+     <h6>Requested Date : <span>{{data.requesteddate}}</span></h6>
+     <h6>Start Time : <span>{{data.starttime}}</span></h6>
+     <h6>End Time : <span>{{data.endtime}}</span></h6>
+     <h6>Duration : <span>{{data.duration}}</span></h6>
+     <h6>Reason : <span>{{data.reason}}</span></h6>
+     <h6>Applied Date : <span>{{data.createddate}}</span></h6> 
+     <h6>Status : <span>{{data.status}}</span></h6> 
+
+    </div>
+
+  </div>
+</div>
+</body>

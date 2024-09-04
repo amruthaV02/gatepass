@@ -1,0 +1,10 @@
+https://apk.doctor9.com/doctor/api/usersData
+	{
+		"username":"vikram",
+		"password":"vikram"
+	}
+
+https://apk.doctor9.com/doctor/api/emailCheck
+	{
+		"email":"vikram@gmail.com"
+	}

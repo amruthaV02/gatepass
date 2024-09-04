@@ -1,0 +1,31 @@
+<app-header></app-header>
+
+<h2 class="text-center">Update Status</h2>
+
+<div class="container">
+<div class="form-area">
+    <form #update="ngForm">
+        <label for="">Student Id     : <span> {{studentid}}</span></label>
+        <label for="">Name :  <span>{{login.data[0].name}}</span></label>
+        <label for="">Requested Date :  <span>{{requesteddate}}</span></label>
+        <label>Start Time            :  <span>{{starttime}}</span></label>
+        <label>End Time              :  <span>{{data.endtime}}</span></label>
+        <label>Duration              :  <span>{{data.duration}}</span></label>
+        <label>Reason                : <span> {{data.reason}}</span></label>
+        <label for="">Applied Date   :  <span>{{data.createddate}}</span></label>
+        <label for="" class="d-block">Status</label>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="status" id="exampleRadios1" value="accepted" ngModel #status="ngModel" required>
+            <label class="form-check-label text-success" for="exampleRadios1">
+             accept
+            </label>
+          </div>
+          <div class="form-check fc2">
+            <input class="form-check-input" type="radio" name="status" id="exampleRadios2" value="rejected" ngModel #status="ngModel" required>
+            <label class="form-check-label text-danger" for="exampleRadios2">
+reject            </label>
+          </div>
+          <button class="btn btn-primary" type="submit" (click)="onSubmit(update)" [disabled]="update.invalid">Update</button>
+    </form>
+</div>
+</div>

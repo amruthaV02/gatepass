@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <app-header></app-header>
+
+<h3 class=" text-center">Application for Gatepass</h3>
+<div class="form-area container">
+     <form #apply="ngForm">
+        <div class="form-group mb-3 mt-5">
+            <label class="d-block mb-2">Requested Date</label>
+            <input type="date" name="reqdate" ngModel #reqdate='ngModel' required  min="{{today | date: 'yyyy-MM-dd'}}" class="form-control" /> 
+            <div *ngIf="reqdate?.errors?.['required'] ">
+                <div class="alert alert-danger" *ngIf="reqdate.invalid && reqdate.touched">Date is required</div>
+              </div>
+        </div>
+        <div class="form-group mb-3">
+            <label class="d-block mb-2">Exit-time</label>
+         <!----   <textarea rows="1" cols="6" name="exit" #exittime required id='exit' ng-model="exittime" class="form-control text " ></textarea>        
+         -->
+        <input type="text" name="exit" ngModel #exit='ngModel' class="form-control" required pattern="^(2[0-3]|[01]?[0-9]):([0-5]?[0-9])$">
+        <div *ngIf="exit?.errors?.['required'] ">
+            <div class="alert alert-danger" *ngIf="exit.invalid && exit.touched">Exit-time is required</div>
+          </div>
+          <div *ngIf="exit?.errors?.['pattern'] ">
+            <div class="alert alert-danger" *ngIf="exit.invalid && exit.touched">Time should be in 24-hr format</div>
+          </div>
+        </div>
+        <div class="form-group mb-3">
+            <label class="d-block mb-2">Duration</label> 
+        <input type="number" class="form-control" onkeydown="if(event.key==='.'){event.preventDefault();}"  oninput="event.target.value = event.target.value.replace(/[^0-9]*/g,'');" min="1" max="7" name="dur" ngModel #duration='ngModel' required>
+        <div *ngIf="duration?.errors?.['required'] ">
+            <div class="alert alert-danger" *ngIf="duration.invalid && duration.touched">Duration is required</div>
+        </div>
+        </div>
+        <div class="form-group mb-3">
+            <label class="d-block mb-2">Reason</label>
+           <input type="text" name="reason" ngModel #reason='ngModel' class="form-control" required>
+           <div *ngIf="reason?.errors?.['required'] ">
+            <div class="alert alert-danger" *ngIf="reason.invalid && reason.touched">Reason is required</div>
+          </div>
+        </div>
+        <div>
+            <button class="btn btn-primary b1 mb-3" type="button"  [disabled]="apply.invalid" (click)="onApply(apply)">Apply</button>
+        </div>
+     </form>
+</div>
+</body>
+</html>

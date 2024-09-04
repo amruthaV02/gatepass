@@ -1,0 +1,37 @@
+label{
+    display: block;
+    margin-top: 20px;
+font-weight: 500;
+font-size: 20px;
+}
+span{
+    font-weight: 400;
+    font-style: italic;
+}
+.container{
+    margin-left: 440px;
+    padding: 30px;
+    border: 1px solid rgb(197, 189, 189);
+    width:350px;
+    border-radius: 15px;
+    margin-bottom: 10px;
+    background-color: azure;
+}
+.form-area{
+    margin: auto;
+
+
+}
+h2{
+    margin-top: 20px;
+    font-style: italic;
+    margin-bottom: 25px;
+    color: darkcyan;
+    font-size: 40px;
+}
+.btn{
+    margin-left:90px;
+}
+.fc2{
+    margin-bottom: 20px;
+}

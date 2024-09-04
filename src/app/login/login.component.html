@@ -1,0 +1,65 @@
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="#">
+         <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAdVBMVEUjHyD///8AAAAJAACtq6yWlZUQCAsiHh/Z2dmenZ0eGhsaFRZhXl/19fVIREVAPT4VDxFVU1Tr6+ve3t4tKivX19ewsLClpKRxb3BmZGV5d3hJR0g0MTLKycpPTE3v7++PjY7CwsK5t7iFhIQ3MzRsamvHxsbyV1wxAAAEz0lEQVR4nO3ci3aqOhAGYEw0YxMvQVSUam3Vnvd/xKPt3uv0QJSRAgOu/3sAV34JMLmQKAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAJBhdQOM8d5Zks72xcbrYf3S0WkzmVmlvZUOGLnNoCnTxXiYzZR2stfSxY0l/LYYbpWWvJJ23nDCi8NwprzYhSSfNB9xMBhnchl12kbCS289eaGMjd+I/2XMjJNISHrfVsTBKlYSl7G9i3iRilxGNWwxYvKq209IZtxixMFJoKdau2gz4lq1XwBY3cpL8a+9bf9mtGrdZsRk2X5EUpNVixEXAhEjp7fH9m5HkYjkFMWb91Ed0uM+md6NmJDIeIOc96YOWim3i9/3d1LudTemAKoj64yONrdLwrWSbmIdyKvlzaf0SaC6aYJV0a2MbyJDjQZY9RZ+EyUdmY2rgVOjYMT0SfppdC0o4sNT99MLvwsNYJKneJ7+4Sj04si8dLtqZH0g4kFkWqMpNjTSfjfSzaqTXRYfNwe5qeIm+MCk1+mpLmKk3ouP07YrcGKOHqo1i1Sxupm0+06k3QvPuVrEwELQR7uFDXcpal/xIkZuPstrdyhMgcddSPVyyxbU2f5yzMW2jx5XW+rISRj3uGL2nHX9XhfMtGRMKfa71NIv5QmX8ntIfiFUPOaM+9xJL0xWlrD3kw+lj9OW66z6kSpZ2a9az3QHqX/uBZz2/Da8InXvgbp6goQR6bfbPbXPJdsPzsS3lhOPz5EwIqftLHsZrof5Qeua+7KwikmsRCLrjdaFe3LITGjPqzFLkspWgSafkHsN7fz+MnBn7uxCQu59yE94lC2STH7diPuP8xNy+31D/CnXHu77kJ9wJHsfum2uPdyahp9QeH2mOP3GrEv5CYVLeTIVG8RPeBYeUat8bcMcH7ITTiPhwYr6yLWIOcZnJ1xJrz8VXojMeRp2QuHX4eVhOsk3iTfXxk54kl7qJpVvEm++lJ3wVXzqrrgkxprz5iZMSHxWpHgjsgo3bsIOjDcDS26ctSfuSt2n/NQdmcKC1Adnl8hyUhQXJrkWS/FOGuqmgy3j+UeuwBSvawc6abC/VdtX2IF1/DDSxQnUYZW/vgt7McIKI6iLz8cHdf6t+DMd2U8T/DTq/Gj36vSeKB9YkDqYx2qRbu9rIxVoXeIeuYpd35voA3fiIFnya+bu7y8Nrkclr9xO1oM9wvYcaOFgumF1s37s89bFd9nV0JR3tJ7s1Q/VI189bVLyTWh/vrewy2A7L2X47k7GXn0zE3yefjnOlQ9dkN5993TjdrpaZUttfh66089v10jf24iyH8Vnp5T+/v7Q9/P7QwrVJT9Mk9Ux7fI3pOUs1fNBtMh3wDz1ROxwwGsB/fuIEt/jP8AW1jEeJXGmwkPozkuDQ+JcjAeR2nBXBgMkzjZ5nJlXvRlFzqepwppRpcsoc8ZQJaTnd7doBgmdE1WVVZ+PnWojddZXdeRNxs8od17bb1wGR1veI2ecqZ7unSandmnZ5wuH9avguYm/Z7WapLdHEtezL7v/ii9BTqt5lq4W/4/ZkfNL62K9Vm4+2ZxG6fcZtNlkRp04g7ZOZK9nFH0fJNydc4QBAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADY/gV7TE6WPzi0AwAAAABJRU5ErkJggg==" alt="..." height="36" class="m-2">
+      </a>
+  <div class="text-left ">GatepassApp</div>
+    
+</nav>
+<section class="vh-100">
+    <div class="container-fluid h-custom">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col-md-9 col-lg-6 col-xl-5">
+          <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.webp"
+            class="img-fluid" alt="Sample image">
+        </div>
+        <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1 form-area">
+          <form #login ='ngForm'>
+<h2 class="mb-5 text-center">Sign In</h2>
+            <!-- Email input -->
+            <div class="form-outline mb-4 form-group">
+                <label class="form-label" for="form3Example3">Username</label>
+
+              <input type="text" id="form3Example3" class="form-control form-control-lg"
+                placeholder="Enter Username" name="username" ngModel #username="ngModel" required minlength="3" autocomplete="off"/>
+
+                <div *ngIf="username?.errors?.['required'] ">
+                  <div class="alert alert-danger" *ngIf="username.invalid && username.touched">Username is required.</div>
+                </div>
+                <div *ngIf="username?.errors?.['minlength']">
+<div class="alert alert-danger" *ngIf="username.invalid && username.touched">Username should have minimum 3 characters</div>
+                </div>
+            </div>
+  
+            <!-- Password input -->
+            <div class="form-outline mb-3 form-group">
+                <label class="form-label" for="form3Example4">Password</label>
+
+              <input type="password" id="form3Example4" class="form-control form-control-lg" name="password" ngModel #password="ngModel" required minlength="3"
+                placeholder="Enter password" />
+                <div *ngIf="password?.errors?.['required']">
+<div class="alert alert-danger" *ngIf="password.invalid && password.touched">Password is required</div>
+                </div>
+                <div *ngIf="password?.errors?.['minlength']">
+<div class="alert alert-danger" *ngIf="password.invalid && password.touched">Password should have minimum 3 characters</div>
+                </div>
+            </div>
+  
+            <div class="d-flex justify-content-between text-center">
+              <a href="#!" class="text-center" routerLink="/forgotpassword">Forgot password?</a>
+            </div>
+  
+            <div class="text-center text-lg-start mt-4 pt-2">
+              <button type="button" class="btn btn-primary btn-lg"
+                style="padding-left: 2.5rem; padding-right: 2.5rem;"  [disabled]="login.invalid"   (click)="onSubmit(login)">Login</button>
+     
+            </div>
+
+       
+          </form>
+        </div>
+      </div>
+    </div>
+ 
+  </section>
+
