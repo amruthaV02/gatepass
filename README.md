@@ -1,6 +1,7 @@
-# Gatepass
+# Gatepass Application
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.1.0.
+The gatepass application is designed with three user roles: HOD, Student, and Visitor. Students can apply for a gatepass to exit the college by providing necessary details like reason, date, and time. Visitors can request an entry pass to the college. The HOD has the authority to accept or reject gatepass applications.
 
 ## Development server
 
